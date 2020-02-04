@@ -1,7 +1,15 @@
 <p style="margin-top: 20px">about works!</p>
 
 <virtual-scroller #scroll [items]="items">
-    <div *ngFor="let item of scroll.viewPortItems" class="teams-multi-col">
-        <img [src]="item.logo" alt="item.name" />
-    </div>
+    <mat-card *ngFor="let item of scroll.viewPortItems" class="teams-multi-col">
+        <img mat-card-lg-image [src]="item.logo" [alt]="item.name" class="item" />
+    </mat-card>
+    <!-- <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col-12 col-md-6 col-lg-4 teams-multi-col-div"
+                *ngFor="let item of scroll.viewPortItems">
+                <img height="200px" width="200px" [src]="item.logo" [alt]="item.name" />
+            </div>
+        </div>
+    </div> -->
 </virtual-scroller>

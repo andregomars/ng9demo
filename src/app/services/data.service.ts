@@ -9,27 +9,59 @@ export class DataService {
        return [
         {
             name: "Patriots",
-            logo: "http://i.nflcdn.com/static/site/7.5/img/teams/NE/NE_logo-80x90.gif"
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/NE.svg"
         },
         {
             name: "Bills",
-            logo: "http://i.nflcdn.com/static/site/7.5/img/teams/BUF/BUF_logo-80x90.gif"
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/BUF.svg"
         },
         {
             name: "Jets",
-            logo: "http://i.nflcdn.com/static/site/7.5/img/teams/NYJ/NYJ_logo-80x90.gif"
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/NYJ.svg"
         },
         {
             name: "Dolphins",
-            logo: "http://i.nflcdn.com/static/site/7.5/img/teams/MIA/MIA_logo-80x90.gif"
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/MIA.svg"
         },
         {
             name: "Ravens",
-            logo: "http://i.nflcdn.com/static/site/7.5/img/teams/BAL/BAL_logo-80x90.gif"
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/BAL.svg"
         },
         {
             name: "Steelers",
-            logo: "http://i.nflcdn.com/static/site/7.5/img/teams/PIT/PIT_logo-80x90.gif"
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/PIT.svg"
+        },
+        {
+            name: "Browns",
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/CLE.svg"
+        },
+        {
+            name: "Bengals",
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/CIN.svg"
+        },
+        {
+            name: "Texans",
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/HOU.svg"
+        },
+        {
+            name: "Titans",
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/TEN.svg"
+        },
+        {
+            name: "Colts",
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/IND.svg"
+        },
+        {
+            name: "Jaguars",
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/JAX.svg"
+        },
+        {
+            name: "Chiefs",
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/KC.svg"
+        },
+        {
+            name: "Broncos",
+            logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/DEN.svg"
         },
     ];
    }

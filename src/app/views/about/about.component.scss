@@ -1,6 +1,6 @@
 virtual-scroller {
     width: 100%;
-    height: 150px;
+    height: 480px;
  }
   
 .teams-single-col {
@@ -13,8 +13,52 @@ virtual-scroller {
     display: inline-block;
     overflow: hidden;
     vertical-align: top;
-    height: 150px;
+    height: 200px;
     border: 0;
-    margin: 0px;
-    width: 50%;
+    margin: 20px;
+    width: 25%;
 }
+
+.teams-multi-col-div {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    height: 200px;
+    border: 0;
+    margin: 20px;
+    width: 25%;
+    // background-size: 200px 200px;
+}
+
+// Extra-Small devices (portrait phones, less than 576px)
+.item {
+    width: 50vw;
+ }
+ 
+ // Small devices (landscape phones, 576px and up)
+ @media (min-width: 576px) { 
+ .item {
+    width: 33vw;
+ }
+ }
+ 
+ // Medium devices (tablets, 768px and up)
+ @media (min-width: 768px) {
+ .item {
+    width: 25vw;
+ }
+ }
+ 
+ // Large devices (desktops, 992px and up)
+ @media (min-width: 992px) {
+ .item {
+    width: 25vw;
+ }
+ }
+ 
+ // Extra large devices (large desktops, 1200px and up)
+ @media (min-width: 1200px) {
+ .item {
+    width: 25vw;
+ }
+ }
