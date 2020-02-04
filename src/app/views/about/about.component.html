@@ -1,1 +1,7 @@
 <p style="margin-top: 20px">about works!</p>
+
+<virtual-scroller #scroll [items]="items">
+    <div *ngFor="let item of scroll.viewPortItems" class="teams-multi-col">
+        <img [src]="item.logo" alt="item.name" />
+    </div>
+</virtual-scroller>
