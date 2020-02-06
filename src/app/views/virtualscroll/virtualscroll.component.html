@@ -1,0 +1,7 @@
+<p style="margin-top: 20px">virtual scroll works!</p>
+
+<cdk-virtual-scroll-viewport itemSize="100" class="viewer">
+    <mat-card *cdkVirtualFor="let item of items">
+        <img mat-card-lg-image [src]="item.logo" [alt]="item.name" />
+    </mat-card>
+</cdk-virtual-scroll-viewport>
