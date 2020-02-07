@@ -5,6 +5,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './views/home/home.module#HomeModule' },
   { path: 'about', loadChildren: './views/about/about.module#AboutModule' },
   { path: 'virtualscroll', loadChildren: './views/virtualscroll/virtualscroll.module#VirtualScrollModule' },
+  { path: 'cdkscroll', loadChildren: './views/cdkscroll/cdkscroll.module#CdkScrollModule' },
 ];
 
 @NgModule({

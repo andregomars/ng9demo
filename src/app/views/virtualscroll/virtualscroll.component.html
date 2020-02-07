@@ -1,18 +1,8 @@
 <div class="container">
-    <p class="mt-4">simple cdk virtual scroll</p>
-    <cdk-virtual-scroll-viewport itemSize="100" class="viewer">
-        <mat-card *cdkVirtualFor="let team of teams">
-            <img mat-card-lg-image [src]="team.logo" [alt]="team.name" />
+    <p class="mt-4">3rd party virtual scroll</p>
+    <virtual-scroller #scroll [items]="teams">
+        <mat-card *ngFor="let item of scroll.viewPortItems" class="teams-multi-col">
+            <img mat-card-lg-image [src]="item.logo" [alt]="item.name" class="item" />
         </mat-card>
-    </cdk-virtual-scroll-viewport>
-    <p class="mt-4">cdk virtual scroll plus bootstrap grid</p>
-    <cdk-virtual-scroll-viewport itemSize="300" class="viewer">
-        <div class="row" *cdkVirtualFor="let row of teamRows">
-            <div *ngFor="let team of row" class="col-12 col-md-6 col-lg-3 my-2">
-                <mat-card>
-                    <img mat-card-lg-image [src]="team.logo" [alt]="team.name" />
-                </mat-card>
-            </div>
-        </div>
-    </cdk-virtual-scroll-viewport>
+    </virtual-scroller>
 </div>

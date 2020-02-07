@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 import { MatCardModule } from '@angular/material/card';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
@@ -12,7 +11,6 @@ import { AboutComponent } from './about.component';
   declarations: [AboutComponent],
   imports: [
     CommonModule,
-    VirtualScrollerModule,
     MatCardModule,
     InfiniteScrollModule,
     AboutRoutingModule
