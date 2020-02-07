@@ -63,6 +63,78 @@ export class DataService {
                 name: "Broncos",
                 logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/DEN.svg"
             },
+            {
+                name: "Raiders",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/OAK.svg"
+            },
+            {
+                name: "Chargers",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/LAC.svg"
+            },
+            {
+                name: "Eagles",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/PHI.svg"
+            },
+            {
+                name: "Cowboys",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/DAL.svg"
+            },
+            {
+                name: "Giants",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/NYG.svg"
+            },
+            {
+                name: "Redskins",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/WAS.svg"
+            },
+            {
+                name: "Packers",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/GB.svg"
+            },
+            {
+                name: "Vikings",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/MIN.svg"
+            },
+            {
+                name: "Bears",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/CHI.svg"
+            },
+            {
+                name: "Lions",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/DET.svg"
+            },
+            {
+                name: "Saints",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/NO.svg"
+            },
+            {
+                name: "Falcons",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/ATL.svg"
+            },
+            {
+                name: "Buccaneers",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/TB.svg"
+            },
+            {
+                name: "Panthers",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/CAR.svg"
+            },
+            {
+                name: "49ers",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/SF.svg"
+            },
+            {
+                name: "Seahawks",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/SEA.svg"
+            },
+            {
+                name: "Rams",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/LA.svg"
+            },
+            {
+                name: "Cardinal",
+                logo: "https://static.nfl.com/static/content/public/static/wildcat/assets/img/logos/teams/ARI.svg"
+            },
         ];
     }
 
