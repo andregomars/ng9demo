@@ -16,4 +16,7 @@ export class AboutComponent implements OnInit {
     this.items = this.dataService.getTeams();
   }
 
+  onScroll() {
+    console.log('scrolled');
+  }
 }

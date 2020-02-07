@@ -1,13 +1,13 @@
-<virtual-scroller #scroll [items]="items">
-    <mat-card *ngFor="let item of scroll.viewPortItems" class="teams-multi-col">
-        <img mat-card-lg-image [src]="item.logo" [alt]="item.name" class="item" />
-    </mat-card>
-    <!-- <div class="container-fluid">
-        <div class="row no-gutters">
-            <div class="col-12 col-md-6 col-lg-4 teams-multi-col-div"
-                *ngFor="let item of scroll.viewPortItems">
-                <img height="200px" width="200px" [src]="item.logo" [alt]="item.name" />
-            </div>
-        </div>
-    </div> -->
-</virtual-scroller>
+<div class="">
+    <div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()"
+        [scrollWindow]="false" class="list-panel">
+        <!-- <virtual-scroller #scroll [items]="items">
+            <mat-card *ngFor="let item of scroll.viewPortItems" class="teams-multi-col">
+                <img mat-card-lg-image [src]="item.logo" [alt]="item.name" class="item" />
+            </mat-card>
+        </virtual-scroller> -->
+        <mat-card *ngFor="let item of items">
+            <img mat-card-lg-image [src]="item.logo" [alt]="item.name" class="item my-4" />
+        </mat-card>
+    </div>
+</div>
