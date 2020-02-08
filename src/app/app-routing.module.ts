@@ -6,6 +6,8 @@ const routes: Routes = [
   { path: 'infinitescroll', loadChildren: './views/about/about.module#AboutModule' },
   { path: 'virtualscroll', loadChildren: './views/virtualscroll/virtualscroll.module#VirtualScrollModule' },
   { path: 'cdkscroll', loadChildren: './views/cdkscroll/cdkscroll.module#CdkScrollModule' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
