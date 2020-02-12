@@ -29,27 +29,27 @@
  // Small devices (landscape phones, 576px and up)
  @media (min-width: 576px) { 
  .item {
-    width: 33vw;
+    width: 27vw;
  }
  }
  
  // Medium devices (tablets, 768px and up)
  @media (min-width: 768px) {
  .item {
-    width: 25vw;
+    width: 30vw;
  }
  }
  
  // Large devices (desktops, 992px and up)
  @media (min-width: 992px) {
  .item {
-    width: 25vw;
+    width: 35vw;
  }
  }
  
  // Extra large devices (large desktops, 1200px and up)
  @media (min-width: 1200px) {
  .item {
-    width: 25vw;
+    width: 30vw;
  }
  }

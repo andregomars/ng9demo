@@ -1,5 +1,24 @@
-<mat-card *ngFor="let item of items">
-    <img mat-card-lg-image [src]="item.logo" [alt]="item.name" class="item my-4" />
-</mat-card>
+<div class="container">
+    <div class="row text-center">
+        <div class="text-center mt-2">
+            <img src="http://static.nfl.com/static/content/public/static/html/labs/cfb247/jordan-love/static/img/Love-1800x760.jpg"
+                alt="banner" height="500" />
+        </div>
+    </div>
+    <div class="row text-center w-100">
+        <mat-card *ngFor="let item of items" class="text-center m-4">
+            <img mat-card-lg-image [src]="item.logo" [alt]="item.name" class="item m-4" />
+            <mat-card-footer class="px-2">
+                <mat-card-title>{{ item.name }}</mat-card-title>
+            </mat-card-footer>
+        </mat-card>
+    </div>
+    <div class="row" *ngIf="isTeamsScrollFinished">
+        <p>{{ verbose$ | async }}</p>
+        <p>{{ verbose$ | async }}</p>
+        <p>{{ verbose$ | async }}</p>
+        <p>{{ verbose$ | async }}</p>
+    </div>
+</div>
 <div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="300" (scrolled)="onScroll()">
 </div>

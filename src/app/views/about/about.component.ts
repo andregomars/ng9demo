@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Team } from '../../models/team';
 import { DataService } from '../../services/data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-about',
@@ -12,12 +13,14 @@ export class AboutComponent implements OnInit {
   teams: Team[];
   batchSize = 4;
   batchStart = 0;
-  finished = false;
+  isTeamsScrollFinished = false;
+  verbose$: Observable<string>;
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.teams = this.dataService.getTeams();
+    this.verbose$ = this.dataService.getIpsum();
     this.onScroll();
   }
 
@@ -25,5 +28,8 @@ export class AboutComponent implements OnInit {
     const batch = this.teams.slice(this.batchStart, this.batchStart + this.batchSize);
     this.batchStart += this.batchSize;
     this.items = this.items.concat(batch);
+    if (this.batchStart > this.teams.length) {
+      this.isTeamsScrollFinished = true;
+    }
   }
 }

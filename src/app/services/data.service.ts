@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { Team } from '../models/team';
+import { map } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root',
 })
 export class DataService {
+    constructor(private http: HttpClient) {
+    }
+
     getTeams(): Team[] {
         return [
             {
@@ -153,5 +159,12 @@ export class DataService {
             /Android/i.test(userAgent) ||
             /Mobile/i.test(userAgent) ||
             window.innerWidth <= 768;
+    }
+
+    getIpsum(): Observable<string> {
+        const url = 'http://www.mocky.io/v2/5e4394cf310000383f3affcb';
+        return this.http.get<string>(url).pipe(
+            map((x: any) => x.text)
+        );
     }
 }
