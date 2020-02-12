@@ -162,7 +162,7 @@ export class DataService {
     }
 
     getIpsum(): Observable<string> {
-        const url = 'http://www.mocky.io/v2/5e4394cf310000383f3affcb';
+        const url = '//www.mocky.io/v2/5e4394cf310000383f3affcb';
         return this.http.get<string>(url).pipe(
             map((x: any) => x.text)
         );
