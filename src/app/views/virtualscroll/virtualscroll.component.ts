@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Team } from '../../models/team';
 import { DataService } from '../../services/data.service';
+import { UtilityService } from 'src/app/services/utility.service';
 
 @Component({
   selector: 'app-virtualscroll',
@@ -10,9 +11,12 @@ import { DataService } from '../../services/data.service';
 export class VirtualScrollComponent implements OnInit {
   teams: Team[];
 
-  constructor(private dataService: DataService) { }
+  constructor(
+    private utility: UtilityService,
+    private dataService: DataService) { }
 
   ngOnInit() {
+    this.utility.setHeaderTagsByPath();
     this.teams = this.dataService.getTeams();
   }
 
