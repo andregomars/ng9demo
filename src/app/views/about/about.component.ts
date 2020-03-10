@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class AboutComponent implements OnInit {
   items: Team[] = [];
   teams: Team[];
-  batchSize = 4;
+  batchSize: number;
   batchStart = 0;
   isTeamsScrollFinished = false;
   verbose$: Observable<string>;
@@ -21,10 +21,12 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     this.teams = this.dataService.getTeams();
     this.verbose$ = this.dataService.getIpsum();
+    this.batchSize = this.dataService.isMobile() ? 2 : 4;
     this.onScroll();
   }
 
   onScroll() {
+    console.warn('scroll')
     const batch = this.teams.slice(this.batchStart, this.batchStart + this.batchSize);
     this.batchStart += this.batchSize;
     this.items = this.items.concat(batch);

@@ -152,7 +152,7 @@ export class DataService {
         return chunks;
     }
 
-    mobile(): boolean {
+    isMobile(): boolean {
         const userAgent = navigator.userAgent;
         return /\b(iPhone|iP[ao]d)/.test(userAgent) ||
             /\b(iP[ao]d)/.test(userAgent) ||

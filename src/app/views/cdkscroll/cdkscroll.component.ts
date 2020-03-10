@@ -16,7 +16,7 @@ export class CdkScrollComponent implements OnInit {
   ngOnInit() {
     this.teams = this.dataService.getTeams();
     const list = this.dataService.getTeams();
-    const size = this.dataService.mobile() ? 1 : 4;
+    const size = this.dataService.isMobile() ? 1 : 4;
     this.teamRows = this.dataService.getScrollableList<Team>(list, size);
   }
 
