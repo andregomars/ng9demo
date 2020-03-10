@@ -64,6 +64,7 @@ export class UtilityService {
 
     private buildIpMeta(): Observable<MetaDefinition> {
         const url = '//api.ipify.org?format=json';
+        // const url = 'https://jsonip.com/';
         return this.http.get<{ip: string}>(url).pipe(
             map(data => {
                 return {

@@ -18,7 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true }
+    // { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
