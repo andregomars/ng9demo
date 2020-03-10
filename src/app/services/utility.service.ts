@@ -11,9 +11,9 @@ import { map, tap } from 'rxjs/operators';
 export class UtilityService {
 
     constructor(private meta: Meta,
-        private title: Title,
-        private link: LinkService,
-        private http: HttpClient
+                private title: Title,
+                private link: LinkService,
+                private http: HttpClient
     ) { }
 
     setHeaderTagsByPath() {
@@ -21,7 +21,7 @@ export class UtilityService {
     }
 
     private test() {
-        const url = 'http://www.mocky.io/v2/5e6738d13100007b0023071d';
+        const url = 'www.mocky.io/v2/5e6738d13100007b0023071d';
         return this.http.get<{name: string}>(url).subscribe(
             x => { console.log(x); }
         );
@@ -32,10 +32,8 @@ export class UtilityService {
         this.buildMetas(keyword).map(meta => {
             this.meta.updateTag(meta)
         });
-        this.buildCopyRight().subscribe(copyright => 
-            this.meta.updateTag(copyright));
-        // this.buildIpMeta().subscribe(ipAddress => 
-        //     this.meta.updateTag(ipAddress));
+        this.buildCopyRight().subscribe(copyright => this.meta.updateTag(copyright));
+        this.buildIpMeta().subscribe(ipAddress => this.meta.updateTag(ipAddress));
         this.link.updateTag(this.buildCanonical(keyword));
     }
 
@@ -65,25 +63,27 @@ export class UtilityService {
     }
 
     private buildIpMeta(): Observable<MetaDefinition> {
-        const url = 'http://api.ipify.org?format=json';
+        const url = '//api.ipify.org?format=json';
         return this.http.get<{ip: string}>(url).pipe(
-            map(data => { return {
-                name: 'customerIP',
-                content: data.ip
-            } })
+            map(data => {
+                return {
+                    name: 'customerIP',
+                    content: data.ip
+                };
+            })
         );
     }
 
     private buildCopyRight(): Observable<MetaDefinition> {
-        const url = 'http://www.mocky.io/v2/5e673944310000a700230721';
+        const url = '//www.mocky.io/v2/5e673944310000a700230721';
         return this.http.get<{copyright: string}>(url).pipe(
-            map(data => { 
+            map(data => {
                 return {
-                name: 'copyright',
-                content: data.copyright
-            } })
+                    name: 'copyright',
+                    content: data.copyright
+                };
+            })
         );
     }
-    
 
 }
