@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Team } from '../../models/team';
 import { DataService } from '../../services/data.service';
+import { UtilityService } from 'src/app/services/utility.service';
 
 @Component({
-  selector: 'app-virtualscroll',
+  selector: 'app-cdkscroll',
   templateUrl: './cdkscroll.component.html',
   styleUrls: ['./cdkscroll.component.scss']
 })
@@ -11,9 +12,12 @@ export class CdkScrollComponent implements OnInit {
   teams: Team[];
   teamRows: Array<Team>[];
 
-  constructor(private dataService: DataService) { }
+  constructor(
+    private utility: UtilityService,
+    private dataService: DataService) { }
 
   ngOnInit() {
+    this.utility.setHeaderTagsByPath();
     this.teams = this.dataService.getTeams();
     const list = this.dataService.getTeams();
     const size = this.dataService.isMobile() ? 1 : 4;

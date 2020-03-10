@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
 import { Team } from '../../models/team';
 import { DataService } from '../../services/data.service';
-import { Observable } from 'rxjs';
+import { UtilityService } from 'src/app/services/utility.service';
 
 @Component({
   selector: 'app-about',
@@ -16,9 +18,12 @@ export class AboutComponent implements OnInit {
   isTeamsScrollFinished = false;
   verbose$: Observable<string>;
 
-  constructor(private dataService: DataService) { }
+  constructor(
+    private utility: UtilityService,
+    private dataService: DataService) { }
 
   ngOnInit() {
+    this.utility.setHeaderTagsByPath();
     this.teams = this.dataService.getTeams();
     this.verbose$ = this.dataService.getIpsum();
     this.batchSize = this.dataService.isMobile() ? 2 : 4;
@@ -34,4 +39,5 @@ export class AboutComponent implements OnInit {
       this.isTeamsScrollFinished = true;
     }
   }
+
 }
