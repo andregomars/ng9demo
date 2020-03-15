@@ -9852,9 +9852,13 @@ function HomeComponent_pre_76_Template(rf, ctx) { if (rf & 1) {
 class HomeComponent {
     constructor() {
         this.title = 'ng9demo';
+        this.delay = 300;
     }
     ngOnInit() {
-        console.log('here the home init');
+        setTimeout(() => {
+            console.log('here the home init');
+            this.title = `Static Ng9 delays ${this.delay}ms`;
+        }, this.delay);
     }
 }
 HomeComponent.ɵfac = function HomeComponent_Factory(t) { return new (t || HomeComponent)(); };

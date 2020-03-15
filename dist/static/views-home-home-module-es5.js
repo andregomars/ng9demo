@@ -14695,12 +14695,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         _classCallCheck(this, HomeComponent);
 
         this.title = 'ng9demo';
+        this.delay = 300;
       }
 
       _createClass(HomeComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          console.log('here the home init');
+          var _this43 = this;
+
+          setTimeout(function () {
+            console.log('here the home init');
+            _this43.title = "Static Ng9 delays ".concat(_this43.delay, "ms");
+          }, this.delay);
         }
       }]);
 
