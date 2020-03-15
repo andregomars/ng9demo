@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "static": "ng build --prod && scully",
+    "static": "ng build --prod && scully --nw",
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "test": "ng test",
     "http": "npx http-server dist/ng9demo -g -c --proxy http://localhost:8080?",
