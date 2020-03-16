@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "static": "ng build --prod && scully --nw",
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "test": "ng test",

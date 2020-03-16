@@ -91,6 +91,9 @@ MIT
 @angular/router
 MIT
 
+@angular/service-worker
+MIT
+
 @scullyio/ng-lib
 
 @tweenjs/tween.js
