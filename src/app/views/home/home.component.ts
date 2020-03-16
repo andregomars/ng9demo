@@ -7,15 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   title = 'ng9demo';
-  delay = 1000;
+  delay = 3000;
 
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
-      console.log('here the home init')
+    // setTimeout(() => {
+    //   console.log('here the home init')
+    //   this.title = `Static Ng9 delays ${this.delay}ms`;
+    // }, this.delay)
+
+    const end = Date.now() + this.delay;
+    while (Date.now() < end) continue;
       this.title = `Static Ng9 delays ${this.delay}ms`;
-    }, this.delay)
   }
 
 }
