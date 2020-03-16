@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -6,20 +8,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  title = 'ng9demo';
-  delay = 3000;
+  title = 'Static Ng9';
+  show$ = new BehaviorSubject<boolean>(false);
 
   constructor() { }
 
   ngOnInit() {
-    // setTimeout(() => {
-    //   console.log('here the home init')
-    //   this.title = `Static Ng9 delays ${this.delay}ms`;
-    // }, this.delay)
+    this.asyncLoad();
+  }
 
-    const end = Date.now() + this.delay;
-    while (Date.now() < end) continue;
-      this.title = `Static Ng9 delays ${this.delay}ms`;
+  private asyncLoad() {
+    setTimeout(() => {
+      console.log('async')
+      this.loadContent();
+    }, environment.delay);
+  }
+
+  private syncLoad() {
+    const end = Date.now() + environment.delay;
+    while (Date.now() < end) continue
+    this.loadContent();
+  }
+
+  private loadContent() {
+    this.title = `Static Ng9 delays ${environment.delay}ms`;
+    this.show$.next(true);
   }
 
 }
