@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -14,24 +13,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.syncLoad();
-  }
-
-  private asyncLoad() {
-    setTimeout(() => {
-      console.log('async')
-      this.loadContent();
-    }, environment.delay);
-  }
-
-  private syncLoad() {
-    const end = Date.now() + environment.delay;
-    while (Date.now() < end) continue
-    this.loadContent();
-  }
-
-  private loadContent() {
-    this.title = `Static Ng9 delays ${environment.delay}ms`;
+    this.title = `Ng9`;
     this.show$.next(true);
   }
 
